@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FE4348D-D823-4EC2-8231-340897C3BD18}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlFlowUI\FrmChangeParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlFlowUI\FrmChangeParam.Designer.cs">
+      <DependentUpon>FrmChangeParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFlowUI\FrmControlFlow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlFlowUI\FrmControlFlow.Designer.cs">
+      <DependentUpon>FrmControlFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataReportUI\FrmReportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataReportUI\FrmReportData.Designer.cs">
+      <DependentUpon>FrmReportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFlowUI\FrmDevControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlFlowUI\FrmDevControl.Designer.cs">
+      <DependentUpon>FrmDevControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFaultAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFaultAlarm.Designer.cs">
+      <DependentUpon>FrmFaultAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataReportUI\FrmReportConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataReportUI\FrmReportConfig.Designer.cs">
+      <DependentUpon>FrmReportConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataReportUI\FrmReportQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataReportUI\FrmReportQuery.Designer.cs">
+      <DependentUpon>FrmReportQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Common.cs" />
+    <Compile Include="Helper\CommHelper.cs" />
+    <Compile Include="Helper\DataGridViewStyle.cs" />
+    <Compile Include="Helper\DataType\Boolean.cs" />
+    <Compile Include="Helper\DataType\Byte.cs" />
+    <Compile Include="Helper\DataType\ByteArray.cs" />
+    <Compile Include="Helper\DataType\Conversion.cs" />
+    <Compile Include="Helper\DataType\Counter.cs" />
+    <Compile Include="Helper\DataType\DInt.cs" />
+    <Compile Include="Helper\DataType\Double.cs" />
+    <Compile Include="Helper\DataType\DWord.cs" />
+    <Compile Include="Helper\DataType\Int.cs" />
+    <Compile Include="Helper\DataType\String.cs" />
+    <Compile Include="Helper\DataType\Struct.cs" />
+    <Compile Include="Helper\DataType\Timers.cs" />
+    <Compile Include="Helper\DataType\Word.cs" />
+    <Compile Include="HWConfigUI\FrmAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmAlarm.Designer.cs">
+      <DependentUpon>FrmAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\IOVariable\FrmChangeVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\IOVariable\FrmChangeVar.Designer.cs">
+      <DependentUpon>FrmChangeVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmHWConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmHWConfig.Designer.cs">
+      <DependentUpon>FrmHWConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParamSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParamSet.Designer.cs">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTrendCurve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTrendCurve.Designer.cs">
+      <DependentUpon>FrmTrendCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\IOVariable\FrmIOVarManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\IOVariable\FrmIOVarManage.Designer.cs">
+      <DependentUpon>FrmIOVarManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\IOVariable\FrmNewVar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\IOVariable\FrmNewVar.Designer.cs">
+      <DependentUpon>FrmNewVar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmParamConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmParamConfig.Designer.cs">
+      <DependentUpon>FrmParamConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmProtocolConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmProtocolConfig.Designer.cs">
+      <DependentUpon>FrmProtocolConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmTrend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmTrend.Designer.cs">
+      <DependentUpon>FrmTrend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmUserRight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWConfigUI\FrmUserRight.Designer.cs">
+      <DependentUpon>FrmUserRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\CheckTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyControls\CheckTextBox.Designer.cs">
+      <DependentUpon>CheckTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\FlowControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControls\FlowControl.Designer.cs">
+      <DependentUpon>FlowControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\LQB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControls\LQB.Designer.cs">
+      <DependentUpon>LQB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\TapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControls\TapControl.Designer.cs">
+      <DependentUpon>TapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\UserTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControls\UserTextBox.Designer.cs">
+      <DependentUpon>UserTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\PrintDGV.cs" />
+    <Compile Include="DataReportUI\PrintOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataReportUI\PrintOptions.Designer.cs">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\recMemory.cs" />
+    <Compile Include="Helper\Toexcel.cs" />
+    <EmbeddedResource Include="ControlFlowUI\FrmChangeParam.resx">
+      <DependentUpon>FrmChangeParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFlowUI\FrmControlFlow.resx">
+      <DependentUpon>FrmControlFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataReportUI\FrmReportData.resx">
+      <DependentUpon>FrmReportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFlowUI\FrmDevControl.resx">
+      <DependentUpon>FrmDevControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFaultAlarm.resx">
+      <DependentUpon>FrmFaultAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParamSet.resx">
+      <DependentUpon>FrmParamSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataReportUI\FrmReportConfig.resx">
+      <DependentUpon>FrmReportConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataReportUI\FrmReportQuery.resx">
+      <DependentUpon>FrmReportQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTrendCurve.resx">
+      <DependentUpon>FrmTrendCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmAlarm.resx">
+      <DependentUpon>FrmAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\IOVariable\FrmChangeVar.resx">
+      <DependentUpon>FrmChangeVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmHWConfig.resx">
+      <DependentUpon>FrmHWConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\IOVariable\FrmIOVarManage.resx">
+      <DependentUpon>FrmIOVarManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\IOVariable\FrmNewVar.resx">
+      <DependentUpon>FrmNewVar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmParamConfig.resx">
+      <DependentUpon>FrmParamConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmProtocolConfig.resx">
+      <DependentUpon>FrmProtocolConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmTrend.resx">
+      <DependentUpon>FrmTrend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWConfigUI\FrmUserRight.resx">
+      <DependentUpon>FrmUserRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\CheckTextBox.resx">
+      <DependentUpon>CheckTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\FlowControl.resx">
+      <DependentUpon>FlowControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\LQB.resx">
+      <DependentUpon>LQB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\TapControl.resx">
+      <DependentUpon>TapControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\UserTextBox.resx">
+      <DependentUpon>UserTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataReportUI\PrintOptions.resx">
+      <DependentUpon>PrintOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{7fdf3c84-bf18-423c-a667-222499660ff1}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{0ad0a63a-5b00-4dd7-a6dc-cbc41e56caf4}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\储气罐.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\阀门.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\阀门打开.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分汽缸.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\干燥机.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\过滤器.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黄鹤楼.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\空压机.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\水箱.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
